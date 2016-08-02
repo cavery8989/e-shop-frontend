@@ -16,7 +16,7 @@ actions.removeItem = item => {
   }
 };
 
-actions.empty = () => {
+actions.emptyBasket = () => {
   return {
     type: types.EMPTY_BASKET
   }
@@ -32,7 +32,7 @@ actions.passCart = () => {
   return {
     type: types.PASS_CART
   }
-}
+};
 
 
 export default actions;
