@@ -1,4 +1,3 @@
-
 import { expect } from 'chai';
 import actions from '../src/actions/actions';
 
