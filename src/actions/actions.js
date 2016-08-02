@@ -22,17 +22,6 @@ actions.emptyBasket = () => {
   }
 };
 
-actions.totalItems = () => {
-  return {
-    type: types.TOTAL_ITEMS
-  }
-};
-
-actions.passCart = () => {
-  return {
-    type: types.PASS_CART
-  }
-};
 
 
 export default actions;
