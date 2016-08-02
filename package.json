@@ -1,0 +1,31 @@
+{
+  "name": "wk04_redux_vending_machine",
+  "version": "1.0.0",
+  "description": "Redux is a 'predictable state container for JavaScript apps'. Say what? It's basically a very intuitive way to manage your application state, as opposed to UI state (such as whether something is visible or not, or whether a particular filter has been applied). UI state is managed by  React, application state is managed by Redux.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./spec --compilers js:babel-core/register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apswak/redux_intro_lecture.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apswak/redux_intro_lecture/issues"
+  },
+  "homepage": "https://github.com/apswak/redux_intro_lecture#readme",
+  "dependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.11.4",
+    "chai": "^3.5.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.11.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-register": "^6.11.6"
+  }
+}
