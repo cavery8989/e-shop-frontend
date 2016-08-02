@@ -38,7 +38,13 @@ describe('#appReducer', () => {
     it('returns the initial state if item is not a part of the array', () => {
       expect(appReducer(initialState, testAction2)).to.eql({basket:['hat', 'cheese', 'pie']})
     });
-
+  });
+  describe('reducer with EMPTY_BASKET', () => {
+    var initialState = {basket:['hat', 'cheese', 'pie']};
+    var testAction = {type: 'EMPTY_BASKET'};
+    it('replaces old basket with empty array', () => {
+      expect(appReducer(initialState, testAction)).to.eql({basket: []});
+    })
 
   });
 

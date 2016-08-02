@@ -10,7 +10,8 @@ const appReducer = (initialState, action) => {
     case types.ADD_ITEM:
       newState = Object.assign({},initialState, { basket: initialState.basket.concat(action.item)});
       break;
-    case types.REMOVE_ITEM :
+
+    case types.REMOVE_ITEM:
       var newBasket = initialState.basket.slice();
       var index = newBasket.indexOf(action.item);
       if(index !== -1){
@@ -18,6 +19,12 @@ const appReducer = (initialState, action) => {
       }
       newState = Object.assign({}, initialState, {
         basket: newBasket
+      });
+      break;
+
+    case types.EMPTY_BASKET:
+      newState = Object.assign({}, initialState, {
+        basket: []
       });
       break;
 
