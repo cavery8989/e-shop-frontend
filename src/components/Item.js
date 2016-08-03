@@ -21,9 +21,10 @@ const Item = React.createClass({
             </div>
 
             <div className="content">
-              Lorem Ipsum Item descripto chris computo will.
+              <a className="button is-success">
+                Add to Basket
+              </a>
               <br/>
-                <small>11:09 PM - 1 Jan 2016</small>
             </div>
           </div>
         </div>

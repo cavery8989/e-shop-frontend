@@ -1,4 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700);
+
 body {
+  font-family: Open Sans;
   background-color: whitesmoke;
   margin-bottom: 30px;
 }
@@ -7,8 +10,25 @@ body {
 
 .header {
   height: 310px;
+  text-align: center;
   background-color: #222;
+  background: repeating-linear-gradient(180deg, #2b2b2b 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0 / 15px 15px;
 }
+
+.header h1 {
+  padding-top: 6vh;
+  color: #d4af37;
+  font-size: 6em;
+  font-weight: 600;
+}
+
+.header h3 {
+  padding-top: 2vh;
+  color: whitesmoke;
+  font-size: 2em;
+}
+
+/* Basket on the right */
 
 .basket {
   color: whitesmoke;
@@ -16,8 +36,10 @@ body {
   right: 0;
   top: 34px;
   background: #009688;
-  width: 171px;
-  height: 236px;
+  /*width: 171px;
+  height: 236px;*/
+  width: 15vh;
+  height: 23vh;
   text-align: center;
   padding-top: 24px;
   border-bottom-left-radius: 20px;
@@ -43,8 +65,4 @@ body {
 .item {
   display: inline-block;
   margin: 2vh;
-}
-
-.img {
-
 }
