@@ -42,5 +42,9 @@ body {
 
 .item {
   display: inline-block;
-  margin: 10px
+  margin: 2vh;
+}
+
+.img {
+
 }
