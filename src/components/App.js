@@ -6,9 +6,19 @@ import ShopFloor from './ShopFloor';
 const App = React.createClass({
   render () {
     return (
-      <div>
+      <div className="app">
+
         <Header />
-        <ShopFloor />
+        <div className=" shop-floor-container columns">
+          <ShopFloor />
+        </div>
+
+
+
+
+
+
+
       </div>
     )
   }
