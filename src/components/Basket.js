@@ -3,8 +3,8 @@ import React, { PropTypes } from 'react'
 const Basket = React.createClass({
   render () {
     return (
-      <div>
-        <h1>BASKET HERE </h1>
+      <div className="basket">
+        <i className="fa fa-shopping-basket" aria-hidden="true"></i>
       </div>
     )
   }

@@ -13,21 +13,14 @@ const Item = React.createClass({
           </div>
           <div className="card-content">
             <div className="media">
-              <div className="media-left">
-                <figure className="image is-32x32">
-                  <img src="http://placehold.it/64x64" alt="Image"/>
-                </figure>
-              </div>
               <div className="media-content">
-                <p className="title is-5">John Smith</p>
-                <p className="subtitle is-6">@johnsmith</p>
+                <p className="title is-5">Item name</p>
+                <p className="subtitle is-6">Item brand</p>
               </div>
             </div>
 
             <div className="content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Phasellus nec iaculis mauris. <a href="#">@bulmaio</a>.
-              <a href="#">#css</a> <a href="#">#responsive</a>
+              Lorem Ipsum Item descripto chris computo will.
               <br/>
                 <small>11:09 PM - 1 Jan 2016</small>
             </div>

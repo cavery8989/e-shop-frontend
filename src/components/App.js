@@ -9,15 +9,9 @@ const App = React.createClass({
       <div className="app">
 
         <Header />
-        <div className=" shop-floor-container columns">
+        <div className="middle-wrapper-content columns">
           <ShopFloor />
         </div>
-
-
-
-
-
-
 
       </div>
     )
