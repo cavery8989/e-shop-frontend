@@ -1,4 +1,5 @@
 import * as types from '../actions/types';
+import _ from 'lodash';
 
 const appReducer = (initialState, action) => {
   initialState = initialState || {basket:[]};
@@ -6,13 +7,15 @@ const appReducer = (initialState, action) => {
 
   action = action || {type: undefined};
   switch(action.type){
+
     case types.ADD_ITEM:
       newState = Object.assign({},initialState, { basket: initialState.basket.concat(action.item)});
       break;
 
     case types.REMOVE_ITEM:
       var newBasket = initialState.basket.slice();
-      var index = newBasket.indexOf(action.item);
+      // var index = newBasket.indexOf(action.item);
+      var index = _.findIndex(newBasket,{id: action.itemKey});
       if(index !== -1){
         newBasket.splice(index, 1);
       }

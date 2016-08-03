@@ -1,6 +1,20 @@
 import React, { PropTypes } from 'react'
 
+
 const Item = React.createClass({
+
+
+  handleClick (e) {
+
+    let item = this.props.info;
+    item.id = Date.now()
+
+    this.props.handleBuy(item);
+
+
+
+
+  },
   render () {
     var info = this.props.info;
     return (
@@ -21,7 +35,7 @@ const Item = React.createClass({
             </div>
 
             <div className="content">
-              <a className="button is-success">
+              <a onClick={this.handleClick} className="button is-success">
                 Add to Basket
               </a>
               <br/>

@@ -29,15 +29,15 @@ describe('#appReducer', () => {
   });
 
   describe('reducer with REMOVE_ITEM', () => {
-    var initialState = {basket:['hat', 'cheese', 'pie']};
-    var testAction = {type: 'REMOVE_ITEM', item: 'cheese'};
-    var testAction2 = {type: 'REMOVE_ITEM', item: 'potato'};
+    var initialState = {basket:[{id: 'hat'}, {id: 'cheese'}, {id:'pie'}]};
+    var testAction = {type: 'REMOVE_ITEM', itemKey: 'cheese'};
+    var testAction2 = {type: 'REMOVE_ITEM', itemKey: 'potato'};
 
     it('returns a new state with the item in the action removed from the array assigned to basket',() => {
-      expect(appReducer(initialState, testAction)).to.eql({basket:['hat', 'pie']});
+      expect(appReducer(initialState, testAction)).to.eql({basket:[{id:'hat'}, {id: 'pie'}]});
     });
     it('returns the initial state if item is not a part of the array', () => {
-      expect(appReducer(initialState, testAction2)).to.eql({basket:['hat', 'cheese', 'pie']})
+      expect(appReducer(initialState, testAction2)).to.eql({basket:[{id: 'hat'}, {id: 'cheese'}, {id: 'pie'}]})
     });
   });
   

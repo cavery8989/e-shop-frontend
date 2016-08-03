@@ -20,7 +20,7 @@ describe('removeItem',() => {
     expect(actions.removeItem.length).to.equal(1);
   });
   it('returns the expected object',() => {
-    expect(actions.removeItem('hat')).to.eql({type: 'REMOVE_ITEM', item: 'hat'})
+    expect(actions.removeItem('hat')).to.eql({type: 'REMOVE_ITEM', itemKey: 'hat'})
   });
 });
 

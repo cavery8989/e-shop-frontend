@@ -9,10 +9,10 @@ actions.addItem = item => {
   }
 };
 
-actions.removeItem = item => {
+actions.removeItem = itemKey => {
   return {
     type: types.REMOVE_ITEM,
-    item: item
+    itemKey: itemKey
   }
 };
 

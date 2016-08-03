@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react'
 import Item from './Item'
+import Actions from '../actions/actions'
 
 const ShopFloor = React.createClass({
   getInitialState () {
@@ -50,13 +51,23 @@ const ShopFloor = React.createClass({
       ]
     }
   },
+  handleBuy (item) {
+
+    let action = Actions.addItem(item);
+    console.log(action,'----------------')
+    this.props.store.dispatch(action);
+
+
+
+
+  },
   render () {
     let itemNodes = this.state.stock.map((book, index) => {
-      return <Item key={index} info={book}/>
-    })
+      return <Item store={this.props.store} key={index} info={book} handleBuy={this.handleBuy}/>
+    });
     return (
       <div className="shop-floor container">
-        <h1>Shop Floor</h1>
+
         {itemNodes}
       </div>
     )
