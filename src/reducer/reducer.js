@@ -5,7 +5,6 @@ const appReducer = (initialState, action) => {
   let newState;
 
   action = action || {type: undefined};
-
   switch(action.type){
     case types.ADD_ITEM:
       newState = Object.assign({},initialState, { basket: initialState.basket.concat(action.item)});

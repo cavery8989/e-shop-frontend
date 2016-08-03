@@ -1,0 +1,23 @@
+body {
+  background-color: whitesmoke;
+}
+
+.header {
+  background-color: red;
+}
+
+.item {
+  background-color: wheat;
+  height: 20vh;
+  width: 20vh;
+  border-radius: 5px;
+}
+
+.item-desc {
+  color: #666;
+  display: block;
+  font-size: 0.7em;
+  line-height: 1.3em;
+  margin: 1px 0;
+  text-decoration: none;
+}

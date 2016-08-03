@@ -27,6 +27,7 @@ describe('#appReducer', () => {
       expect(appReducer(null, testAction)).to.eql({basket: ['cheese']});
     });
   });
+
   describe('reducer with REMOVE_ITEM', () => {
     var initialState = {basket:['hat', 'cheese', 'pie']};
     var testAction = {type: 'REMOVE_ITEM', item: 'cheese'};
@@ -39,6 +40,7 @@ describe('#appReducer', () => {
       expect(appReducer(initialState, testAction2)).to.eql({basket:['hat', 'cheese', 'pie']})
     });
   });
+  
   describe('reducer with EMPTY_BASKET', () => {
     var initialState = {basket:['hat', 'cheese', 'pie']};
     var testAction = {type: 'EMPTY_BASKET'};
