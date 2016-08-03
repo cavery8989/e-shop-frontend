@@ -6,14 +6,28 @@ body {
 /* Header */
 
 .header {
-  background-color: red;
+  height: 310px;
+  background-color: #222;
+}
+
+.basket {
+  color: whitesmoke;
+  position: fixed;
+  right: 0;
+  top: 34px;
+  background: #009688;
+  width: 171px;
+  height: 236px;
+  text-align: center;
+  padding-top: 24px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px
 }
 
 .basket i {
+  padding-top: 55px;
   font-size: 50px;
-  position: fixed;
-  right: 30px;
-  top: 30px;
+
 }
 /* Shop floor */
 

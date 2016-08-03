@@ -7,7 +7,7 @@ const Header = React.createClass({
     return (
       <div className="header">
         <h1 className="shop-name">Shop Name</h1>
-        <Basket />
+
       </div>
     )
   }
