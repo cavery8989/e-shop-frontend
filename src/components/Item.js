@@ -2,18 +2,10 @@ import React, { PropTypes } from 'react'
 
 
 const Item = React.createClass({
-
-
   handleClick (e) {
-
     let item = this.props.info;
     item.id = Date.now()
-
     this.props.handleBuy(item);
-
-
-
-
   },
   render () {
     var info = this.props.info;
