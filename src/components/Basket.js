@@ -14,14 +14,10 @@ const Basket = React.createClass({
   },
   removeItem (e) {
     var target = e.target.dataset.itemid;
-
-    console.log(typeof target)
-
     var action = Actions.removeItem(parseInt(target));
     this.props.store.dispatch(action);
   },
   render () {
-
     let state = this.props.store.getState();
     let totalItems = state.basket.length;
     let totalPrice = 0;

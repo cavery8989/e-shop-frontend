@@ -3,7 +3,6 @@
 body {
   font-family: Open Sans;
   background-color: whitesmoke;
-  margin-bottom: 30px;
 }
 
 /* Header */
@@ -12,19 +11,20 @@ body {
   height: 310px;
   text-align: center;
   background-color: #222;
-  background: repeating-linear-gradient(180deg, #2b2b2b 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0 / 15px 15px;
+  background: url('http://samshadwell.me/images/escheresque_ste.png');
+  background-repeat: repeat;
 }
 
 .header h1 {
   padding-top: 6vh;
-  color: #d4af37;
+  color: #D4AF37;
   font-size: 6em;
   font-weight: 600;
 }
 
 .header h3 {
   padding-top: 2vh;
-  color: whitesmoke;
+  color: #D2D2D2;
   font-size: 2em;
 }
 
@@ -38,7 +38,6 @@ body {
   display: flex;
   align-items: flex-start;
   transition: 0.5s ease-in-out;
-  z-index: 3;
 }
 
 .hidden {
@@ -75,15 +74,6 @@ body {
 
 }
 
-.basket-items{
-  overflow: scroll;
-  height: 321px;
-  margin: 5% auto;
-
-  width: 215px;
-}
-
-
 .basket-list h1 {
   font-weight: bolder;
   color: #222;
@@ -104,4 +94,27 @@ body {
 .item {
   display: inline-block;
   margin: 2vh;
+}
+
+/* Footer */
+
+.footer {
+  height: 200px;
+  background-color: #222;
+  background: url('http://samshadwell.me/images/escheresque_ste.png');
+  background-repeat: repeat;
+}
+
+.footer a {
+  color: #D2D2D2;
+  font-size: 1em;
+  margin: 20px;
+}
+
+.footer a:not(.icon):hover, .footer a:visited:not(.icon):hover {
+    border-bottom-color: #D4AF37;
+}
+
+.footer a:hover {
+  color: #000;
 }

@@ -1,12 +1,11 @@
-import React, { PropTypes } from 'react';
+import React, { PropTypes } from 'react'
 // import {createStore} from 'redux'
 // import reducer from '../reducer/reducer'
 
-import Header from './Header';
-import ShopFloor from './ShopFloor';
+import Header from './Header'
+import ShopFloor from './ShopFloor'
 import Basket from './Basket'
-
-
+import Footer from './Footer'
 
 // store.getState
 // store.dispatch(action)
@@ -15,7 +14,9 @@ import Basket from './Basket'
 // console.log('store', store.getState())
 
 const App = React.createClass({
+  componentDidMount () {
 
+  },
   render () {
     return (
       <div className="app">
@@ -24,7 +25,7 @@ const App = React.createClass({
         <div className="middle-wrapper-content columns">
           <ShopFloor store={this.props.store}/>
         </div>
-
+        <Footer />
       </div>
     )
   }
