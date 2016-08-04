@@ -54,9 +54,12 @@ const Basket = React.createClass({
         </div>
         <div className="basket-list">
           <h1>Basket</h1>
-          <ul>
-            {listNodes}
-          </ul>
+          <div className="basket-items">
+            <ul>
+              {listNodes}
+            </ul>
+          </div>
+
         </div>
       </div>
     )

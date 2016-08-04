@@ -38,6 +38,7 @@ body {
   display: flex;
   align-items: flex-start;
   transition: 0.5s ease-in-out;
+  z-index: 3;
 }
 
 .hidden {
@@ -73,6 +74,15 @@ body {
   font-size: 5vh;
 
 }
+
+.basket-items{
+  overflow: scroll;
+  height: 321px;
+  margin: 5% auto;
+
+  width: 215px;
+}
+
 
 .basket-list h1 {
   font-weight: bolder;
