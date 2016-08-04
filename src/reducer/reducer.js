@@ -17,6 +17,7 @@ const appReducer = (initialState, action) => {
       // var index = newBasket.indexOf(action.item);
       var index = _.findIndex(newBasket,{id: action.itemKey});
       if(index !== -1){
+        console.log('been hit');
         newBasket.splice(index, 1);
       }
       newState = Object.assign({}, initialState, {

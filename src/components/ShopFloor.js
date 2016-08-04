@@ -11,21 +11,21 @@ const ShopFloor = React.createClass({
           img: 'https://raw.githubusercontent.com/getify/You-Dont-Know-JS/master/up%20%26%20going/cover.jpg',
           author: 'Kyle Sympson',
           publisher: "'O'Reilly",
-          price: 22.50
+          price: 15.50
         },
         {
           book_name: 'Scope & Closures',
           img: 'https://raw.githubusercontent.com/getify/You-Dont-Know-JS/master/scope%20%26%20closures/cover.jpg',
           author: 'Kyle Sympson',
           publisher: "'O'Reilly",
-          price: 22.50
+          price: 20.50
         },
         {
           book_name: 'this & Object Prototypes',
           img: 'https://raw.githubusercontent.com/getify/You-Dont-Know-JS/master/this%20%26%20object%20prototypes/cover.jpg',
           author: 'Kyle Sympson',
           publisher: "'O'Reilly",
-          price: 22.50
+          price: 25.50
         },
         {
           book_name: 'Types & Grammar',
@@ -52,14 +52,8 @@ const ShopFloor = React.createClass({
     }
   },
   handleBuy (item) {
-
     let action = Actions.addItem(item);
-    console.log(action,'----------------')
     this.props.store.dispatch(action);
-
-
-
-
   },
   render () {
     let itemNodes = this.state.stock.map((book, index) => {
@@ -67,7 +61,6 @@ const ShopFloor = React.createClass({
     });
     return (
       <div className="shop-floor container">
-
         {itemNodes}
       </div>
     )

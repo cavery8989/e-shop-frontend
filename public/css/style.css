@@ -30,26 +30,55 @@ body {
 
 /* Basket on the right */
 
-.basket {
-  color: whitesmoke;
+.basket-container {
+  height: 400px;
+  width: 400px;
   position: fixed;
-  right: 0;
   top: 34px;
-  background: #009688;
-  /*width: 171px;
-  height: 236px;*/
-  width: 15vh;
-  height: 23vh;
-  text-align: center;
-  padding-top: 24px;
-  border-bottom-left-radius: 20px;
-  border-top-left-radius: 20px
+  display: flex;
+  align-items: flex-start;
+  transition: 0.5s ease-in-out;
 }
 
-.basket i {
+.hidden {
+  right: -285px;
+}
+
+.visible {
+  right: 0;
+}
+
+.basket-list {
+  height: 100%;
+  width: 100%;
+  background-color: lightseagreen;
+  border-bottom-left-radius: 10px;
+}
+
+.basket-tab {
+  color: whitesmoke;
+  background: #009688;
+  width: 171px;
+  height: 236px;
+  /*width: 15vh;
+  height: 23vh;*/
+  text-align: center;
+  padding-top: 24px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px
+}
+
+.basket-tab i {
   padding-top: 5vh;
   font-size: 5vh;
 
+}
+
+.basket-list h1 {
+  font-weight: bolder;
+  color: #222;
+  font-size: 1.5em;
+  text-align: center;
 }
 /* Shop floor */
 
