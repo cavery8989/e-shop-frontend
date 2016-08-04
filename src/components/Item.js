@@ -1,14 +1,10 @@
 import React, { PropTypes } from 'react'
-
+import {connect} from 'react-redux';
+import actions from '../actions/actions';
 
 const Item = React.createClass({
-  handleClick (e) {
-    let item = this.props.info;
-    item.id = Date.now()
-    this.props.handleBuy(item);
-  },
   render () {
-    var info = this.props.info;
+    var {info} = this.props;
     return (
       <div className="item">
 
@@ -27,7 +23,7 @@ const Item = React.createClass({
             </div>
 
             <div className="content">
-              <a onClick={this.handleClick} className="button is-success">
+              <a onClick={this.props.dispatchAddItem.bind(this)} className="button is-success">
                 Add to Basket
               </a>
               <br/>
@@ -39,6 +35,17 @@ const Item = React.createClass({
       </div>
     )
   }
-})
+});
 
-export default Item
+function mapStateToDispatch (dispatch) {
+  return {
+    dispatchAddItem: function () {
+      var newItem = Object.assign({}, this.props.info, {
+        id: Date.now()
+      });
+      dispatch(actions.addItem(newItem));
+    }
+  }
+}
+
+export default connect(null, mapStateToDispatch)(Item);

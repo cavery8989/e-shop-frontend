@@ -31,6 +31,7 @@ body {
 /* Basket on the right */
 
 .basket-container {
+  z-index: 3;
   height: 400px;
   width: 400px;
   position: fixed;

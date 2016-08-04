@@ -2,6 +2,8 @@ import React, { PropTypes } from 'react'
 
 import Actions from '../actions/actions'
 
+import {connect} from 'react-redux';
+
 const Basket = React.createClass({
   getInitialState () {
     return {
@@ -12,31 +14,22 @@ const Basket = React.createClass({
     var changed = !this.state.sidebarVisible;
     this.setState({sidebarVisible: changed});
   },
-  removeItem (e) {
-    var target = e.target.dataset.itemid;
-    var action = Actions.removeItem(parseInt(target));
-    this.props.store.dispatch(action);
-  },
+
   render () {
-    let state = this.props.store.getState();
-    let totalItems = state.basket.length;
+    let totalItems = this.props.basket.length;
     let totalPrice = 0;
-    let price = state && state.basket[0] && state.basket[0].price;
 
-    if(price) {
-      totalPrice = state.basket.reduce((mem, cv) => {
-        return mem + cv.price;
-      }, 0);
+    totalPrice = this.props.basket.reduce((mem, cv) => {
+      return mem + cv.price;
+    }, 0);
 
-      var listNodes = state.basket.map((item, index) => {
-        return (
-          <li key={index}><i className="fa fa-times"
-                             data-itemId={item.id}
-                             onClick={this.removeItem}
-                             aria-hidden="true"/>{item.book_name}</li>
-        )
-      });
-    }
+    var listNodes = this.props.basket.map((item, index) => {
+      return (
+        <li key={index}><i className="fa fa-times"
+                           onClick={this.props.dispatchRemoveItem.bind(null, item.id)}
+                           aria-hidden="true"/>{item.book_name}</li>
+      )
+    });
     var sidebarVisible = this.state.sidebarVisible ? 'basket-container visible' : 'basket-container hidden';
 
     return (
@@ -60,6 +53,24 @@ const Basket = React.createClass({
       </div>
     )
   }
-})
+});
 
-export default Basket
+const mapStateToProps = (state) => {
+  return{
+    basket: state.basket
+  }
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return{
+    dispatchRemoveItem: (id) => {
+      let action = Actions.removeItem(+id);
+      dispatch(action);
+
+    }
+  }
+};
+
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Basket)
