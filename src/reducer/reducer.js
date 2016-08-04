@@ -15,9 +15,16 @@ const appReducer = (initialState, action) => {
     case types.REMOVE_ITEM:
       var newBasket = initialState.basket.slice();
       // var index = newBasket.indexOf(action.item);
+
+      console.log('basket',newBasket);
+      console.log('actionKey === ',action.itemKey);
+
       var index = _.findIndex(newBasket,{id: action.itemKey});
+
+      console.log(index)
       if(index !== -1){
         console.log('been hit');
+
         newBasket.splice(index, 1);
       }
       newState = Object.assign({}, initialState, {

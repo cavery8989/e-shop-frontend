@@ -14,7 +14,10 @@ const Basket = React.createClass({
   },
   removeItem (e) {
     var target = e.target.dataset.itemid;
-    var action = Actions.removeItem(target);
+
+    console.log(typeof target)
+
+    var action = Actions.removeItem(parseInt(target));
     this.props.store.dispatch(action);
   },
   render () {
@@ -27,11 +30,14 @@ const Basket = React.createClass({
     if(price) {
       totalPrice = state.basket.reduce((mem, cv) => {
         return mem + cv.price;
-      }, 0)
+      }, 0);
 
       var listNodes = state.basket.map((item, index) => {
         return (
-          <li key={index}><i className="fa fa-times" data-itemId={item.id} onClick={this.removeItem} aria-hidden="true"></i>{item.book_name}</li>
+          <li key={index}><i className="fa fa-times"
+                             data-itemId={item.id}
+                             onClick={this.removeItem}
+                             aria-hidden="true"/>{item.book_name}</li>
         )
       });
     }
