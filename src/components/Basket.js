@@ -47,7 +47,7 @@ const Basket = React.createClass({
     var listNodes = condensedList.map((item, index) => {
       return (
         <li key={index}><i className="fa fa-times"
-                           onClick={this.props.dispatchRemoveItem.bind(null, item.id)}
+                           onClick={this.props.dispatchRemoveItem.bind(null, item.idArr[0])}
                            aria-hidden="true"/>{item.book_name + ' X' + item.quantity}</li>
       )
     });
