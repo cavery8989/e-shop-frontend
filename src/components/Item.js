@@ -22,10 +22,11 @@ const Item = React.createClass({
               </div>
             </div>
 
-            <div className="content">
+            <div className="content btn-and-price">
               <a onClick={this.props.dispatchAddItem.bind(this)} className="button is-success">
                 Add to Basket
               </a>
+              <h5>£{info.price}</h5>
               <br/>
             </div>
           </div>
