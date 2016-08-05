@@ -4,7 +4,7 @@ const Footer = React.createClass({
   render () {
     return (
       <div className="footer">
-        <div className="columns">
+        <div className="info">
           <a>Coderbooks LTD</a>
           <a>About</a>
           <a>Contact</a>

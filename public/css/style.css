@@ -121,7 +121,6 @@ body {
 
 .shop-floor{
   flex-wrap: wrap;
-  /*text-align: center;*/
 }
 
 .item {
@@ -133,21 +132,59 @@ body {
   max-width: 250px;
 }
 
+.btn-and-price {
+  display: flex;
+}
+
+.btn-and-price h5 {
+  margin: 1vh;
+}
+
 /* Checkout Page */
 
 .checkout-container {
-  background-color: yellow;
-  margin: 100px;
-  font-family: Open Sans;
+  /*background-color: yellow;*/
+  margin: 10vh 30vh;
+}
+
+.checkout-container .column {
+  margin-left: 10vh;
 }
 
 .checkout-container h1 {
   color: #202020;
   float: left;
-  font-family: Georgia;
-  font-size: 2.7em;
+  text-transform: uppercase;
+  font-size: 2em;
   font-weight: normal;
   margin: 0;
+}
+
+.payment-options i {
+  color: #222;
+  font-size: 30px;
+  margin: 10px;
+}
+
+.payment-options i:hover {
+  color: #333;
+}
+
+.payment-options .fa-cc-visa {
+  color: #16216A;
+}
+.payment-options .fa-cc-amex {
+  color: #007CC3;
+}
+.payment-options .fa-cc-mastercard {
+  color: crimson;
+}
+.payment-options .fa-cc-paypal {
+  color: #005ea6;
+
+}
+.payment-options .fa-cc-jcb  {
+  color: silver;
 }
 
 /* Footer */
@@ -163,6 +200,10 @@ body {
   color: #D2D2D2;
   font-size: 1em;
   margin: 20px;
+}
+
+.footer .info {
+  margin-left: 10vh;
 }
 
 .footer a:not(.icon):hover, .footer a:visited:not(.icon):hover {
