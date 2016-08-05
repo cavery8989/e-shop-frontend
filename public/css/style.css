@@ -49,12 +49,6 @@ body {
   right: 0;
 }
 
-.basket-list {
-  height: 100%;
-  width: 100%;
-  background-color: lightseagreen;
-  border-bottom-left-radius: 10px;
-}
 
 .basket-tab {
   color: whitesmoke;
@@ -66,21 +60,46 @@ body {
   text-align: center;
   padding-top: 24px;
   border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px
+  border-top-left-radius: 10px;
+  -webkit-box-shadow: 2px 0 0 rgba(0,0,0,0.55);
 }
-
 .basket-tab i {
-  padding-top: 5vh;
   font-size: 5vh;
-
+  margin-top: 2vh;
+}
+.basket-list {
+  height: 100%;
+  width: 100%;
+  background-color: lightseagreen;
+  border-bottom-left-radius: 10px;
+  -webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.55);
+  overflow-y: auto;
 }
 
 .basket-list h1 {
   font-weight: bolder;
   color: #222;
+  margin-top: 2vh;
   font-size: 1.5em;
   text-align: center;
 }
+
+.basket-items {
+  margin-top: 4vh;
+  margin-left: 2vh;
+  color: whitesmoke;
+  font-weight: bolder;
+}
+
+.basket-items i {
+  margin: 3px 10px 0px 10px;
+  color: #222;
+}
+
+.basket-items i:hover {
+  color: darkgrey;
+}
+
 /* Shop floor */
 
 .middle-wrapper-content {

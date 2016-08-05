@@ -27,7 +27,7 @@ const Basket = React.createClass({
       return (
         <li key={index}><i className="fa fa-times"
                            onClick={this.props.dispatchRemoveItem.bind(null, item.id)}
-                           aria-hidden="true"/>{item.book_name}</li>
+                           aria-hidden="true"/>{item.book_name + ':  £' + item.price}</li>
       )
     });
     var sidebarVisible = this.state.sidebarVisible ? 'basket-container visible' : 'basket-container hidden';
