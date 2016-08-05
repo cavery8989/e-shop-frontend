@@ -123,6 +123,10 @@ body {
   flex-wrap: wrap;
 }
 
+.card-image {
+  height: 364px;
+}
+
 .item {
   display: inline-block;
   margin: 2vh;
@@ -130,6 +134,10 @@ body {
 
 .book-card {
   max-width: 250px;
+}
+
+.book-card img {
+  max-height: 400px;
 }
 
 .btn-and-price {
