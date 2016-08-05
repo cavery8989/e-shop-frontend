@@ -1,12 +1,16 @@
 import React, {PropTypes} from 'react';
 import {Link} from 'react-router'
+import helpers from '../helpers/helpers'
+import Actions from '../actions/actions'
+
+
 
 import {connect} from 'react-redux';
 
  const Checkout = React.createClass({
   render () {
-
-    let itemNodes = this.props.basket.map(item => (<li>{item.book_name}</li>));
+    let condensedBasket = helpers.condenseBasket(this.props.basket);
+    let itemNodes = condensedBasket.map(item => (<li>{item.book_name} X {item.quantity}  <a onClick={this.props.dispatchRemoveItem.bind(null,item.idArr[0])}>Remove</a></li>));
 
     return(
       <div className="checkout-container">
@@ -22,6 +26,8 @@ import {connect} from 'react-redux';
           <ul>
             {itemNodes}
           </ul>
+          <Link to="/shop"><i className="fa fa-shopping-cart" aria-hidden="true"></i>  Keep shopping</Link>
+          <button onClick={this.props.dispatchEmptyBasket}>Empty Basket</button>
         </div>
         <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
@@ -41,16 +47,7 @@ import {connect} from 'react-redux';
   }
 });
 
-const mapDispatchToProps = (dispatch) => {
-  return{
-    remove: function () {
 
-    },
-    add: function () {
-
-    }
-  }
-};
 
 
 const mapStateToProps = (state) =>{
@@ -59,7 +56,21 @@ const mapStateToProps = (state) =>{
   })
 };
 
-export default connect(mapStateToProps)(Checkout)
+const mapDispatchToProps = (dispatch) => {
+  return{
+    dispatchRemoveItem: (id) => {
+      let action = Actions.removeItem(id);
+      dispatch(action);
+
+    },
+    dispatchEmptyBasket: () => {
+      let action = Actions.emptyBasket();
+      dispatch(action);
+    }
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Checkout)
 
 
 // <Link to="/shop"><i className="fa fa-shopping-cart" aria-hidden="true"></i>  Keep shopping</Link>

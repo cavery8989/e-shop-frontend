@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react'
 import {Link} from 'react-router'
 import _ from 'underscore';
+import helpers from '../helpers/helpers'
 
 import Actions from '../actions/actions'
 
@@ -25,18 +26,20 @@ const Basket = React.createClass({
       return mem + cv.price;
     }, 0);
 
-    var condensedList = this.props.basket.reduce((mem,cur)=>{
-      let index =  _.find(mem,(obj) => obj.book_name === cur.book_name);
-      if(index){
-        index.quantity += 1;
-        index.idArr.push(cur.id);
-        return mem;
-      }else {
-        let bookObj = {book_name: cur.book_name, quantity: 1, idArr: [cur.id]};
-        mem.push(bookObj);
-        return mem;
-      }
-    },[]);
+    var condensedList = helpers.condenseBasket(this.props.basket);
+
+    // var condensedList = this.props.basket.reduce((mem,cur)=>{
+    //   let index =  _.find(mem,(obj) => obj.book_name === cur.book_name);
+    //   if(index){
+    //     index.quantity += 1;
+    //     index.idArr.push(cur.id);
+    //     return mem;
+    //   }else {
+    //     let bookObj = {book_name: cur.book_name, quantity: 1, idArr: [cur.id]};
+    //     mem.push(bookObj);
+    //     return mem;
+    //   }
+    // },[]);
 
     console.log('list', condensedList);
 

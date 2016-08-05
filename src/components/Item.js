@@ -26,7 +26,7 @@ const Item = React.createClass({
               <a onClick={this.props.dispatchAddItem.bind(this)} className="button is-success">
                 Add to Basket
               </a>
-              <h5>£{info.price}</h5>
+              <h5>£{info.price.toFixed(2)}</h5>
               <br/>
             </div>
           </div>
