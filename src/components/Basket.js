@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react'
+import {Link} from 'react-router'
 
 import Actions from '../actions/actions'
 
@@ -39,7 +40,13 @@ const Basket = React.createClass({
           <br/>
           <p>Total Items: {totalItems} </p>
           <p>Total: £{totalPrice.toFixed(2)}</p>
+
           <i className="fa fa-shopping-basket" aria-hidden="true"></i>
+          <br/>
+          <br/>
+
+          <Link to="/checkout">To Checkout</Link>
+
         </div>
         <div className="basket-list">
           <h1>Basket</h1>

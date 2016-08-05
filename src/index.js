@@ -5,6 +5,7 @@ import {Route, Router, hashHistory, IndexRedirect} from 'react-router';
 
 import App from './components/App';
 import ShopFloor from './components/ShopFloor'
+import Checkout from './components/Checkout'
 
 import {createStore} from 'redux'
 import reducer from './reducer/reducer'
@@ -21,6 +22,7 @@ ReactDOM.render(
 
         <IndexRedirect to="/shop"/>
         <Route path='/shop' component={ShopFloor}/>
+        <Route path='/checkout' component={Checkout}/>
 
 
       </Route>
