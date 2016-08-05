@@ -8,7 +8,7 @@ const Item = React.createClass({
     return (
       <div className="item">
 
-        <div className="card">
+        <div className="card book-card">
           <div className="card-image">
             <figure>
               <img src={info.img} alt=""/>

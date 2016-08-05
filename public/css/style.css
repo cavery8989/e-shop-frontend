@@ -129,6 +129,27 @@ body {
   margin: 2vh;
 }
 
+.book-card {
+  max-width: 250px;
+}
+
+/* Checkout Page */
+
+.checkout-container {
+  background-color: yellow;
+  margin: 100px;
+  font-family: Open Sans;
+}
+
+.checkout-container h1 {
+  color: #202020;
+  float: left;
+  font-family: Georgia;
+  font-size: 2.7em;
+  font-weight: normal;
+  margin: 0;
+}
+
 /* Footer */
 
 .footer {
