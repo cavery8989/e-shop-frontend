@@ -20,10 +20,9 @@ const App = React.createClass({
   render () {
     return (
       <div className="app">
-        <Basket store={this.props.store}/>
         <Header />
         <div className="middle-wrapper-content columns">
-          <ShopFloor store={this.props.store}/>
+          {this.props.children}
         </div>
         <Footer />
       </div>

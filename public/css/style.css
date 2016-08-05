@@ -108,7 +108,7 @@ body {
 
 .shop-floor{
   flex-wrap: wrap;
-  text-align: center;
+  /*text-align: center;*/
 }
 
 .item {

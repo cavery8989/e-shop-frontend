@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react'
 import Item from './Item'
+import Basket from './Basket'
 import {connect} from 'react-redux';
 
 const ShopFloor = React.createClass({
@@ -9,6 +10,7 @@ const ShopFloor = React.createClass({
     });
     return (
       <div className="shop-floor container">
+        <Basket store={this.props.store}/>
         {itemNodes}
       </div>
     )
