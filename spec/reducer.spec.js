@@ -1,5 +1,6 @@
 import {expect} from 'chai';
 import appReducer from '../src/reducer/reducer';
+import DeepFreeze from 'deep-freeze';
 
 describe('#appReducer', () => {
   it('is a function', () => {
@@ -24,7 +25,7 @@ describe('#appReducer', () => {
       expect(appReducer(initialState, testAction)).eql({basket: ['hi', 'cheese']});
     });
     it('should return a new state with the item found in in the action assigned to the array found in basket', () => {
-      expect(appReducer(null, testAction)).to.eql({basket: ['cheese']});
+      expect(appReducer(null, testAction).basket).to.eql(['cheese']);
     });
   });
 
@@ -43,7 +44,7 @@ describe('#appReducer', () => {
     it('returns the initial state if item is not a part of the array', () => {
       expect(appReducer(initialState, testAction2)).to.eql({basket:[{id: 'hat'}, {id: 'cheese'}, {id: 'pie'}]})
     });
-    it.only('it returns the the expected result with', () =>{
+    it('it returns the the expected result with', () =>{
       expect(appReducer(initialState2, testAction3)).to.eql({basket: []});
     });
 
@@ -55,6 +56,21 @@ describe('#appReducer', () => {
     it('replaces old basket with empty array', () => {
       expect(appReducer(initialState, testAction)).to.eql({basket: []});
     })
+
+  });
+
+  describe('deepFreeze', function () {
+
+    it('is a test ', function () {
+        var initialState = DeepFreeze({basket:['hat', 'cheese', 'pie']});
+        var testAction = {type: 'ADD_ITEM', item: 'people'};
+
+        expect(appReducer(initialState,testAction));
+      });
+
+
+
+
 
   });
 
