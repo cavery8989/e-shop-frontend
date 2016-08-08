@@ -2,9 +2,7 @@ import React, { PropTypes } from 'react'
 import {Link} from 'react-router'
 import _ from 'underscore';
 import helpers from '../helpers/helpers'
-
 import Actions from '../actions/actions'
-
 import {connect} from 'react-redux';
 
 const Basket = React.createClass({
@@ -17,18 +15,13 @@ const Basket = React.createClass({
     var changed = !this.state.sidebarVisible;
     this.setState({sidebarVisible: changed});
   },
-
   render () {
     let totalItems = this.props.basket.length;
     let totalPrice = 0;
-
     totalPrice = this.props.basket.reduce((mem, cv) => {
       return mem + cv.price;
     }, 0);
-
     var condensedList = helpers.condenseBasket(this.props.basket);
-    console.log('list', condensedList);
-
     var listNodes = condensedList.map((item, index) => {
       return (
         <li key={index}><i className="fa fa-times"
@@ -49,7 +42,6 @@ const Basket = React.createClass({
           <i className="fa fa-shopping-basket" aria-hidden="true"></i>
           <br/>
           <br/>
-
           <Link to="/checkout">To Checkout</Link>
 
         </div>
@@ -66,13 +58,11 @@ const Basket = React.createClass({
     )
   }
 });
-
 const mapStateToProps = (state) => {
   return{
     basket: state.basket
   }
 };
-
 const mapDispatchToProps = (dispatch) => {
   return{
     dispatchRemoveItem: (id) => {
@@ -82,7 +72,5 @@ const mapDispatchToProps = (dispatch) => {
     }
   }
 };
-
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(Basket)

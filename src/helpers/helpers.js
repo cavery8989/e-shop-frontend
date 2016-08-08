@@ -1,9 +1,8 @@
 import _ from 'underscore'
 const helpers = {};
 
-
 helpers.condenseBasket = (basket) =>{
-  var condensedList = basket.reduce((mem,cur)=>{
+  let condensedList = basket.reduce((mem,cur)=>{
     let index =  _.find(mem,(obj) => obj.book_name === cur.book_name);
     if(index){
       index.quantity += 1;
@@ -15,9 +14,7 @@ helpers.condenseBasket = (basket) =>{
       return mem;
     }
   },[]);
-
   return condensedList;
-
 };
 
 export default helpers

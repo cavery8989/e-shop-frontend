@@ -16,7 +16,6 @@ const ShopFloor = React.createClass({
     )
   }
 });
-
 function mapStateToProps (state) {
   return {
     stock: state.stock

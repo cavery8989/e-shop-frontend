@@ -4,14 +4,13 @@ import actions from '../actions/actions';
 
 const Item = React.createClass({
   render () {
-    var {info} = this.props;
+    let {info} = this.props;
     return (
       <div className="item">
-
         <div className="card book-card">
           <div className="card-image">
             <figure>
-              <img src={info.img} alt=""/>
+              <img src={info.img} alt="book_cover"/>
             </figure>
           </div>
           <div className="card-content">
@@ -21,7 +20,6 @@ const Item = React.createClass({
                 <p className="subtitle is-6">{info.publisher}</p>
               </div>
             </div>
-
             <div className="content btn-and-price">
               <a onClick={this.props.dispatchAddItem.bind(this)} className="button is-success">
                 Add to Basket
@@ -31,8 +29,6 @@ const Item = React.createClass({
             </div>
           </div>
         </div>
-
-
       </div>
     )
   }
@@ -41,7 +37,7 @@ const Item = React.createClass({
 function mapStateToDispatch (dispatch) {
   return {
     dispatchAddItem: function () {
-      var newItem = Object.assign({}, this.props.info, {
+      let newItem = Object.assign({}, this.props.info, {
         id: Date.now()
       });
       dispatch(actions.addItem(newItem));

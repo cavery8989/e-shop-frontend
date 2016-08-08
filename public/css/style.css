@@ -6,7 +6,6 @@ body {
 }
 
 /* Header */
-
 .header {
   height: 310px;
   text-align: center;
@@ -14,14 +13,12 @@ body {
   background: url('http://samshadwell.me/images/escheresque_ste.png');
   background-repeat: repeat;
 }
-
 .header h1 {
   padding-top: 6vh;
   color: #D4AF37;
   font-size: 6em;
   font-weight: 600;
 }
-
 .header h3 {
   padding-top: 2vh;
   color: #D2D2D2;
@@ -29,7 +26,6 @@ body {
 }
 
 /* Basket on the right */
-
 .basket-container {
   z-index: 3;
   height: 400px;
@@ -40,23 +36,17 @@ body {
   align-items: flex-start;
   transition: 0.5s ease-in-out;
 }
-
 .hidden {
   right: -285px;
 }
-
 .visible {
   right: 0;
 }
-
-
 .basket-tab {
   color: whitesmoke;
   background: #009688;
   width: 171px;
   height: 236px;
-  /*width: 15vh;
-  height: 23vh;*/
   text-align: center;
   padding-top: 24px;
   border-bottom-left-radius: 10px;
@@ -74,9 +64,7 @@ body {
   -webkit-transition: none 86ms ease-out;
   transition: none 86ms ease-out;
   font-weight: bolder;
-
 }
-
 .basket-tab a:hover{
   color: #D2D2D2;
 }
@@ -88,7 +76,6 @@ body {
   -webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.55);
   overflow-y: auto;
 }
-
 .basket-list h1 {
   font-weight: bolder;
   color: #222;
@@ -96,71 +83,57 @@ body {
   font-size: 1.5em;
   text-align: center;
 }
-
 .basket-items {
   margin-top: 4vh;
   margin-left: 2vh;
   color: whitesmoke;
   font-weight: bolder;
 }
-
 .basket-items i {
   margin: 3px 10px 0px 10px;
   color: #222;
 }
-
 .basket-items i:hover {
   color: darkgrey;
 }
 
 /* Shop floor */
-
 .middle-wrapper-content {
   margin-top: 5vh;
 }
-
 .shop-floor{
   flex-wrap: wrap;
 }
-
 .card-image {
   height: 364px;
 }
-
 .item {
   display: inline-block;
   margin: 2vh;
 }
-
 .book-card {
   max-width: 250px;
 }
-
 .book-card img {
   max-height: 400px;
 }
-
 .btn-and-price {
   display: flex;
 }
-
 .btn-and-price h5 {
   margin: 1vh;
 }
 
 /* Checkout Page */
-
 .checkout-container {
   background-color: white;
   margin: 10vh 30vh;
   padding: 10vh;
   border-radius: 4px;
 }
-
 .checkout-container .column {
   margin-left: 10vh;
 }
-
 .checkout-container h1 {
   color: #202020;
   float: left;
@@ -169,12 +142,6 @@ body {
   font-weight: normal;
   margin: 0;
 }
-
-#back-to-shop {
-  color: #222;
-  font-size: 1.5em;
-}
-
 .checkout-container button {
   background-color: #4CAF50;
   border: none;
@@ -187,21 +154,23 @@ body {
   margin: 5vh 10vh;
   transition: 0.3s ease-in-out;
 }
-
+.back-to-shop button {
+  padding: 1vh 2vh;
+}
 .checkout-container button:hover {
   background-color:#4CA420;
 }
-
+.checkout-container i {
+  margin: 0px 5px;
+}
 .payment-options i {
   color: #222;
   font-size: 30px;
   margin: 10px;
 }
-
 .payment-options i:hover {
   color: #333;
 }
-
 .payment-options .fa-cc-visa {
   color: #16216A;
 }
@@ -213,36 +182,29 @@ body {
 }
 .payment-options .fa-cc-paypal {
   color: #005ea6;
-
 }
 .payment-options .fa-cc-jcb  {
   color: silver;
 }
 
-
 /* Footer */
-
 .footer {
   height: 200px;
   background-color: #222;
   background: url('http://samshadwell.me/images/escheresque_ste.png');
   background-repeat: repeat;
 }
-
 .footer a {
   color: #D2D2D2;
   font-size: 1em;
   margin: 20px;
 }
-
 .footer .info {
   margin-left: 10vh;
 }
-
 .footer a:not(.icon):hover, .footer a:visited:not(.icon):hover {
     border-bottom-color: #D4AF37;
 }
-
 .footer a:hover {
   color: #000;
 }

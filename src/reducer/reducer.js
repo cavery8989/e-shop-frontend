@@ -101,13 +101,12 @@ const appReducer = (initialState, action) => {
       break;
 
     case types.REMOVE_ITEM:
-      var newBasket = initialState.basket.slice();
-      // var index = newBasket.indexOf(action.item);
+      let newBasket = initialState.basket.slice();
 
       console.log('basket', newBasket);
       console.log('actionKey === ', action.itemKey);
 
-      var index = _.findIndex(newBasket, {id: action.itemKey});
+      let index = _.findIndex(newBasket, {id: action.itemKey});
 
       console.log(index);
       if (index !== -1) {
