@@ -151,8 +151,10 @@ body {
 /* Checkout Page */
 
 .checkout-container {
-  /*background-color: yellow;*/
+  background-color: white;
   margin: 10vh 30vh;
+  padding: 10vh;
+  border-radius: 4px;
 }
 
 .checkout-container .column {
@@ -166,6 +168,28 @@ body {
   font-size: 2em;
   font-weight: normal;
   margin: 0;
+}
+
+#back-to-shop {
+  color: #222;
+  font-size: 1.5em;
+}
+
+.checkout-container button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5vh 10vh;
+  transition: 0.3s ease-in-out;
+}
+
+.checkout-container button:hover {
+  background-color:#4CA420;
 }
 
 .payment-options i {
@@ -194,6 +218,7 @@ body {
 .payment-options .fa-cc-jcb  {
   color: silver;
 }
+
 
 /* Footer */
 
