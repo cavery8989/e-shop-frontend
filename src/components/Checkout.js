@@ -7,8 +7,8 @@ import {connect} from 'react-redux';
  const Checkout = React.createClass({
   render () {
     let condensedBasket = helpers.condenseBasket(this.props.basket);
-    let itemNodes = condensedBasket.map(item => (
-      <div className="columns">
+    let itemNodes = condensedBasket.map((item,index) => (
+      <div key={index} className="columns">
         <div className="column is-1">
           <img src={item.img}/>
         </div>
@@ -18,7 +18,7 @@ import {connect} from 'react-redux';
         <div className="column is-2">
           £{(item.price * item.quantity).toFixed(2)}
         </div>
-        <div className="column">
+        <div className="column is-6">
           <a onClick={this.props.dispatchRemoveItem.bind(null,item.idArr[0])}>Remove</a>
         </div>
       </div>));
