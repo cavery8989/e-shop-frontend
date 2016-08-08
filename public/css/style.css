@@ -99,7 +99,7 @@ body {
 
 /* Shop floor */
 .middle-wrapper-content {
-  margin-top: 5vh;
+  margin-top: 0;
 }
 .shop-floor{
   flex-wrap: wrap;
@@ -131,9 +131,6 @@ body {
   padding: 10vh;
   border-radius: 4px;
 }
-.checkout-container .column {
-  margin-left: 10vh;
-}
 .checkout-container h1 {
   color: #202020;
   float: left;
@@ -144,6 +141,27 @@ body {
 }
 .back-to-shop button {
   padding: 1vh 2vh;
+}
+@media (max-width: 1000px) {
+  .checkout-container {
+    margin: 5vh 10vh;
+    padding: 2vh;
+  }
+  .checkout-container h1 {
+    font-size: 1em;
+  }
+}
+@media (max-width: 600px) {
+  .checkout-container {
+    margin: 2vh 50px;
+    padding: 2vh;
+  }
+  .checkout-container h1 {
+    font-size: 10px;
+  }
+}
+.checkout-container .column {
+  margin-left: 10vh;
 }
 .checkout-container button {
   background-color: #222;
