@@ -142,8 +142,11 @@ body {
   font-weight: normal;
   margin: 0;
 }
+.back-to-shop button {
+  padding: 1vh 2vh;
+}
 .checkout-container button {
-  background-color: #4CAF50;
+  background-color: #222;
   border: none;
   color: white;
   padding: 10px 25px;
@@ -152,13 +155,11 @@ body {
   display: inline-block;
   font-size: 16px;
   margin: 5vh 10vh;
-  transition: 0.3s ease-in-out;
-}
-.back-to-shop button {
-  padding: 1vh 2vh;
+  transition: 0.1s ease-in-out;
+  text-transform: uppercase;
 }
 .checkout-container button:hover {
-  background-color:#4CA420;
+  background-color: #4CAF50;
 }
 .checkout-container i {
   margin: 0px 5px;
