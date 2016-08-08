@@ -4,12 +4,10 @@ import helpers from '../helpers/helpers'
 import Actions from '../actions/actions'
 import {connect} from 'react-redux';
 
-
-
-
  const Checkout = React.createClass({
   render () {
     let condensedBasket = helpers.condenseBasket(this.props.basket);
+    console.log(condensedBasket);
     let itemNodes = condensedBasket.map(item => (
       <div className="columns">
         <div className="column is-1">
